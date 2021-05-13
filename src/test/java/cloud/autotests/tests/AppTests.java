@@ -15,15 +15,15 @@ public class AppTests extends TestBase {
     @DisplayName("Selenide search test")
     void generatedTest() {
         step("open https://google.com", () -> {
-            // todo just add selenium action
+            open("https://www.google.com/");
         });
 
         step("type search \"selenide\", press Enter", () -> {
-            // todo just add selenium action
+            $(byName("q")).setValue("selenide").pressEnter();
         });
 
         step("check selenide.org in results", () -> {
-            // todo just add selenium action
+            $("#search").shouldHave(text("selenide.org"));
         });
     }
 
