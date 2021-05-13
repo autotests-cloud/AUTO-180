@@ -15,15 +15,12 @@ public class AppTests extends TestBase {
     @DisplayName("Selenide search test")
     void generatedTest() {
         step("open https://google.com", () -> {
-            open("https://www.google.com/");
         });
 
         step("type search \"selenide\", press Enter", () -> {
-            $(byName("q")).setValue("selenide").pressEnter();
         });
 
         step("check selenide.org in results", () -> {
-            $("#search").shouldHave(text("selenide.org"));
         });
     }
 
